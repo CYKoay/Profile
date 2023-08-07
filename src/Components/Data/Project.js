@@ -31,7 +31,7 @@ const projectList = [
         description: "Project created with the purpose to demostrate my tech portfolio, which would come in handy for my future job hunting.",
         image: profile,
         completion: true,
-        website: "",
+        website: "https://profile-gilt-theta.vercel.app/",
         code: "https://github.com/CYKoay/Profile"
     },
     {
