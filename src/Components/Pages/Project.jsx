@@ -30,6 +30,7 @@ const Project = ({setActivePage}) => {
   })
   useEffect (() => {
     setActivePage("project")
+    document.title = "Project"
   }, [])
 
   const logo = {

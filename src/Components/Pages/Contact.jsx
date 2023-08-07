@@ -24,6 +24,7 @@ const Contact = ({setActivePage}) => {
   const formRef = useRef(null)
   useEffect (() => {
     setActivePage("contact")
+    document.title="Contact"
   }, [])
   const {
     register,

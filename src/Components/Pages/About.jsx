@@ -21,6 +21,7 @@ const About = ({setActivePage}) => {
 
    useEffect (() => {
     setActivePage("about")
+    document.title="About"
   }, [])
   return (
     <>

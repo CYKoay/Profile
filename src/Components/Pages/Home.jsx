@@ -15,6 +15,7 @@ const Home = ({setActivePage}) => {
 
    useEffect (() => {
     setActivePage("home")
+    document.title = "Home"
   }, [])
   return (
     <>
