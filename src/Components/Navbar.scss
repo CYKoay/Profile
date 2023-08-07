@@ -1,0 +1,112 @@
+.navbar-container {
+    position: relative;
+    top: 0;
+    height: 60px;
+     background-color: #000000;
+    border-bottom: solid 2px #18a27d;
+    width: 100%;
+    min-width: 450px;
+    text-align: center;
+    box-shadow: 0 3px 8px 2px #06FFBD;
+    z-index: 100;
+    
+}
+
+
+.btn{
+    text-align: center;
+    margin: 0px 20px;
+    position:relative;
+    top:50%;
+    transform:translateY(-50%);
+    font-size:22px;
+    color:#06FFBD;
+    border-radius: 5px;
+    path {
+            stroke: #06FFBD;
+        }
+}
+
+
+.activeBtn{
+    text-align: center;
+    margin: 0px 20px;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 22px;
+    color: black;
+    background-color: #06ffbd;
+    border-radius: 5px;
+        path {
+            stroke: black;
+        }
+}
+
+@media (max-width:550px){
+    .navbar-container{
+        min-width:100px;
+    }
+
+    .btn, .activeBtn {
+        margin: 0px 10px;
+    }
+}
+
+.btn{
+    .icon{
+        transition: all 0.3s ease-out;
+    }
+    &:hover{
+    color: #06FFBD;
+    
+    .icon{opacity:0;
+    }
+    
+    &:after{
+        opacity:1
+    }
+}
+&:after{
+    content: "";
+    font-size:9px;
+    letter-spacing: 2px;
+    position:absolute;
+    display:block;
+    width:100%;
+    text-align: center;
+    opacity:0;
+    transition: all 0.8s ease-out;
+    bottom: 25%;
+    left:0;
+    
+}
+
+
+}
+
+
+
+.btn.home-btn {
+    &::after {
+        content: "HOME";
+    }
+}
+
+.btn.about-btn{
+    &:after{
+        content: "ABOUT"
+    }
+}
+
+.btn.project-btn {
+    &:after {
+        content: "PROJECTS"
+    }
+}
+
+.btn.contact-btn {
+    &:after {
+        content: "CONTACT"
+    }
+}

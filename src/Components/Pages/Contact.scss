@@ -1,0 +1,222 @@
+.contact-container{
+    width:100%;
+    height:100%;
+    overflow-y: auto;
+    background-image: url(../../assets/contact_bg_lg.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: local;
+}
+
+.contact-left{
+    position:absolute;
+    width:50%;
+    height:100%;
+}
+
+.left-title{
+    margin-bottom: 30px;
+    font-weight: 700;
+    font-size: 45px;
+}
+
+.left-content{
+    text-align: left;
+    width:80%;
+    left:25%;
+    min-width:300px;
+    color:white;
+    font-size: 35px;
+    position:relative;
+    top:50%;
+    transform: translateY(-50%) ;
+}
+
+.left-btn{
+    margin-left:3px;
+    
+}
+
+.left-message{
+    animation: fadeInUp 1s 2s backwards;
+    font-size:30px;
+}
+
+.show-sm{
+    display:none
+}
+
+.contact-right {
+    position: absolute;
+    left:50%;
+    width: 50%;
+    height: 100%;
+}
+
+
+
+.email-form{
+    background-color: rgba(32, 31, 31, 0.836);
+    height:80%;
+    position:relative;
+    top:50%;
+    animation: fadeIn 1s 3.5s backwards;
+    transform: translateY(-50%);
+    left:10%;
+    width:80%;
+    padding: 2% 5%;
+    border-radius: 5px;
+    max-width:500px;
+    overflow: hidden;
+    min-width:300px;
+}
+
+.email-form h3{
+    color:white;
+    font-weight: 700;
+}
+
+.error-msg{
+    color:red;
+}
+
+.email-form label{
+    color:white;
+    font-weight:600;
+    margin-top:20px;
+}
+
+.error-msg{
+    position:absolute;
+    font-size: small;
+}
+
+.email-form input{
+    width:100%;
+    padding: 2px;
+    border-radius: 5px;
+    background-color: rgb(61, 70, 92);
+        border: none
+}
+
+.email-form textarea{
+    width:100%;
+    padding:2px;
+    border-radius: 5px;
+    background-color: rgb(61, 70, 92);
+    border:none;
+    resize:none
+}
+
+
+
+.left-content a{
+    text-align: center;
+    margin-top: 15px;
+    display: inline-block;
+    color: white;
+    font-variant: none;
+    
+    font-size: 20px;
+    width: 120px;
+    font-weight: 400;
+    letter-spacing: 1px;
+    font-family: sans-serif;
+    text-decoration: none;
+    padding: 5px 5px;
+    border: 2px solid white;
+    position: relative;
+    margin-right:8px;
+    animation: fadeInUp 1s 2.5s backwards;
+
+    &:hover {
+        background-color: white;
+        color: black
+    }
+}
+
+.email-form button{
+    text-align: center;
+        margin-top: 25px;
+        color: white;
+        font-variant: none;
+        background-color: rgba(93, 88, 88, 0.306);
+        font-size: 15px;
+        min-width:120px;
+        width:30%;
+        float:right;
+        font-weight: 400;
+        letter-spacing: 1px;
+        font-family: sans-serif;
+        text-decoration: none;
+        padding: 5px 5px;
+        border: 2px solid white;
+        position: relative;
+    
+        &:hover {
+            background-color: whitesmoke;
+            color: black
+        }
+}
+
+@media (max-width:750px) {
+    .contact-container{
+        background-image: url(../../assets/contact_bg.jpg);
+    }
+
+    .contact-left {
+        width: 100%;
+        display:inline-block;
+        height:100%;
+        position: relative
+    }
+
+    .left-content {
+        width: 90%;
+        left: 5%;
+
+    }
+
+    .left-title{
+        font-size:40px;
+        margin-bottom:40px;
+    }
+
+    .left-message{
+        font-size:25px;
+    }
+
+    .left-content a{
+        font-size:12px;
+        width:100px;
+        margin-top:30px;
+    }
+
+    .contact-right {
+        width: 100%;
+        position: relative;
+        left: 0;
+        height:100%;
+        display:flex;
+    }
+
+    .email-form {
+        width: 90%;
+        left: 5%;
+        min-width: 200px;;
+        max-width: none;;
+    }
+
+    .show-sm{
+        font-size:12px;
+        position:absolute;
+        z-index:50;
+        text-align: center;
+        color:white;
+        top:90%;
+        left:50%;
+        transform: translateX(-50%);
+        display:block;
+        animation: flash 5s infinite;
+    }
+}
