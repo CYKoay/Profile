@@ -68,7 +68,7 @@ const Contact = ({setActivePage}) => {
           Tell me more about the opportunity.
         </div>
         <div className="left-info">
-          <a href="" target='_blank' ><ImProfile className='align-middle'/><span className='align-middle left-btn'>Resume</span></a>
+          <a href="https://drive.google.com/file/d/1LayWNssfCgUtQ3XDVLaZwHLyp97LhbaC/view?usp=sharing" target='_blank' ><ImProfile className='align-middle'/><span className='align-middle left-btn'>Resume</span></a>
           <a href="https://github.com/CYKoay" target='_blank'><AiFillGithub  className='align-middle '/><span className="align-middle left-btn">GitHub</span></a>
         </div>
         </div>

@@ -148,7 +148,8 @@
 
 .project-name {
     margin-bottom: 20px;
-    color: #06FFBD
+    color: #06FFBD;
+    font-weight: 700;
 }
 
 .project-btn1,
@@ -269,7 +270,7 @@
     justify-content: space-evenly;
     display: flex;
     right: 0;
-
+    
 }
 
 .scroll-btn {
@@ -277,12 +278,14 @@
     color: black;
     text-align: center;
     height: 100px;
-    font-weight: 500;
+    font-weight: 600;
     margin: 0px auto;
     width: 30px;
     border: none;
     padding: 0px 0px;
     z-index: 35;
+    font-family: sans-serif;
+    
 }
 
 @media (max-width: 550px){
