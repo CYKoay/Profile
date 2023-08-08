@@ -28,7 +28,7 @@ const projectList = [
         name: "Portfolio_CY",
         id: 2,
         tech: ["React", "Javascript",  "Bootstrap", "Sass", "Animate.js", "FramerMotion" ],
-        description: "Project created with the purpose to demostrate my tech portfolio, which would come in handy for my future job hunting.",
+        description: "Project created with the purpose to demonstrate my tech portfolio, which would come in handy for my future job hunting.",
         image: profile,
         completion: true,
         website: "https://profile-gilt-theta.vercel.app/",
