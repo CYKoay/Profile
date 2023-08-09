@@ -120,8 +120,8 @@ const Project = ({setActivePage}) => {
                 </Motion>
                 <Motion>
                   <div className="project-info">
-                    <a className="project-btn1" href={p.website} target='_blank'><PiRocketLaunchLight className='align-middle'/> <span className="align-middle">LAUNCH</span></a>
-                    <a className="project-btn2" href={p.code} target='_blank'><AiFillGithub className='align-middle'/> <span className="align-middle">CODE </span></a>
+                    <a className="project-btn1" href={p.website} target='_blank' style={{display: p.completion == false && "none"}}><PiRocketLaunchLight className='align-middle'/> <span className="align-middle">LAUNCH</span></a>
+                    <a className="project-btn2" href={p.code} target='_blank' style={{display: p.completion == false && "none"}}><AiFillGithub className='align-middle'/> <span className="align-middle">CODE </span></a>
                   </div>
                 </Motion>
               </div>
