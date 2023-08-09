@@ -1,10 +1,9 @@
-import React,{useState, useEffect} from 'react'
+import React,{useState, useEffect, useRef} from 'react'
 import "./Contact.scss"
 import AnimatedLetters from "../AnimatedLetters"
 import {zodResolver} from "@hookform/resolvers/zod"
 import * as z from "zod"
 import {useForm} from "react-hook-form"
-import { useRef } from 'react'
 import emailjs from "@emailjs/browser"
 import { AiFillGithub } from "react-icons/ai"
 import {ImProfile} from "react-icons/im"
@@ -29,11 +28,11 @@ const Contact = ({setActivePage}) => {
   const {
     register,
     handleSubmit,
+    reset,
     formState:{errors}
   } = useForm({resolver: zodResolver(schema)})
 
-  const sendEmail = (e) => {
-    e.preventDefault()
+  const sendEmail =  () => {
     emailjs
     .sendForm(
       "service_everpyi",
@@ -43,7 +42,6 @@ const Contact = ({setActivePage}) => {
       )
       .then(() => {
         alert("Message successfully sent!")
-        console.log("sent")
         window.location.reload(false)
       },
       (err) => {
@@ -51,7 +49,7 @@ const Contact = ({setActivePage}) => {
         alert("Failed to send the message, please try again!")
       }
       )
-
+      reset()
   }
 
   return (
@@ -80,8 +78,7 @@ const Contact = ({setActivePage}) => {
       </div>
       <div className="contact-right">
         <div className="email-form">
-          <form ref={formRef} onSubmit={handleSubmit(() =>
-            sendEmail)}>
+          <form ref={formRef} onSubmit={handleSubmit(sendEmail)}>
               <h3>Drop me a message!</h3>
               <label htmlFor="name">Name:</label>
               <br/>
@@ -99,7 +96,7 @@ const Contact = ({setActivePage}) => {
               <br/>
             <textarea placeholder="Message" name="message" type="text" {...register("message")}/>
             {errors.message?.message && <p className='error-msg'>{errors.message.message}</p>}
-            <button type="submit" className='button'>Contact Me!</button>
+            <button type="submit" className='button' value="SUBMIT">SUBMIT</button>
           </form>
         </div>
       </div>
